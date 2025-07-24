@@ -25,4 +25,21 @@ INSERT INTO orders (user_id, amount) VALUES
 SELECT * FROM orders
 order by user_id;
 
+CREATE TABLE accounts (
+    id SERIAL PRIMARY KEY,
+    balance REAL CHECK (balance >= 0)
+);
 
+--id   name   grades
+--1    danny  "{math: 99, english: 80...}"
+
+CREATE TABLE students (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    grades JSONB
+);
+
+INSERT INTO students (name, grades) VALUES
+('danny', '{"math": 99, "english": 80, "history": 75}'),
+('arya', '{"math": 88, "english": 95, "history": 70}'),
+('jon',  '{"math": 76, "english": 67, "history": 82}');
