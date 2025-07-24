@@ -19,4 +19,3 @@ where (grades->>'math')::INT > 90;
 
 -- A. Show all viewers and their rating for "Inception"
 -- B. Find all viewers who gave "Titanic" a rating of 4 or higher
--- C. Show all movies rated 5 by "Thor"
